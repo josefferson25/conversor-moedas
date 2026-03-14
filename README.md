@@ -36,9 +36,6 @@ Um conversor de moedas moderno, responsivo e intuitivo, desenvolvido com HTML, C
 
 ## 📸 Screenshots
 
-| Desktop | Mobile |
-|---------|--------|
-| ![Desktop](./screenshot-desktop.png) | ![Mobile](./screenshot-mobile.png) |
 
 ![Preview do Conversor](assets/c-moedas.jpeg)
 
