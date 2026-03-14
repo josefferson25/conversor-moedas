@@ -1,0 +1,237 @@
+/* Reset e variáveis */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  padding: 1rem;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.card-header i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-header p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.card-body {
+  padding: 2rem 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.input-group label i {
+  margin-right: 0.3rem;
+  color: #5f2c82;
+}
+
+.custom-select,
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.custom-select:focus,
+.input-group input:focus {
+  outline: none;
+  border-color: #5f2c82;
+  box-shadow: 0 0 0 3px rgba(95, 44, 130, 0.1);
+}
+
+.btn-convert {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-convert:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn-convert:active {
+  transform: scale(0.98);
+}
+
+.result-area {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.currency-card {
+  flex: 1;
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow:
+    inset 2px 2px 5px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.currency-card.from {
+  border-left: 4px solid #5f2c82;
+}
+
+.currency-card.to {
+  border-left: 4px solid #49a09d;
+}
+
+.currency-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.currency-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+.currency-code {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #5f2c82;
+  opacity: 0.7;
+}
+
+.card-footer {
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card-footer a {
+  color: #5f2c82;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .card-body {
+    padding: 1.5rem 1rem;
+  }
+
+  .currency-value {
+    font-size: 1rem;
+  }
+
+  .arrow-icon {
+    font-size: 1rem;
+  }
+
+  .result-area {
+    flex-direction: column;
+  }
+
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+}
